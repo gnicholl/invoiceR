@@ -1,12 +1,14 @@
 # invoiceR
 
 An R Markdown based invoicing system that (1) creates a PDF invoice and (2) input billed balance into an income csv file. 
+Install via `remotes::install_github("gnicholl/invoiceR")`. mychan24 is the original author. I have made just a handful of changes
+in order to make the package work out of the box. At least I *think* it works, as long as you have TinyTex to auto install tex packages.
+You may need to install Open Sans font manually, i.e. `tinytex::tlmgr_install(pkgs=c("opensans"))`.
 
-## Demo
+## Example
 
-* Run `demo/ClientName_InvoiceGeneration.Rmd` for a demo that will generate PDF invoice and export a csv file with income data. 
+* Find example code in `inst/demo/ClientName_InvoiceGeneration.Rmd` which will generate PDF invoice and export a csv file with income data. 
 * If it is run again, the same invoice will be generated, but income data will not be exported unless the invoice number is different (try changing the `invoice_demo.yaml` file) 
-* 
 
 ## Inputs
 `invoiceR` wants 3 `yaml` files that separately define information for the (1) client, (2) provider (you), (3) invoice. 
@@ -37,5 +39,5 @@ The CSV file includes:
 * **NOTES:** If a new income_file is defined in the function, it will generate a new csv file with the above information entered. If an existing income_file is defined, it will check whether a duplicated invoice number exists. If yes, it will not enter the income data and ask you to either (1) define a new income_file or (2) set the income_file to `NULL` and skip this step. Set to `NULL` if re-generating PDF only. 
 
 ## Example
-<img src="demo/ExampleInvoice/ExampleInvoice.png" width="656" height="522">
+<img src="inst/demo/ExampleInvoice/ExampleInvoice.png" width="656" height="522">
 

@@ -1,12 +1,12 @@
 require(rmarkdown)
 require(yaml)
 
-invoiceR <- function(invoice_yaml, client_yaml, provider_yaml, invdir, income_file=NULL){
+
+invoiceR <- function(invoice_yaml, client_yaml, provider_yaml, income_file=NULL){
   
   template_rmd = system.file("invoice_template.Rmd",package="invoiceR")
   
   print(getwd())
-  # setwd(invdir)
   
   #### Create invoice by rendering PDF using  rmarkdown ####
   df <- read_yaml(invoice_yaml)
@@ -17,8 +17,7 @@ invoiceR <- function(invoice_yaml, client_yaml, provider_yaml, invdir, income_fi
          params = list(invoice=invoice_yaml,              # params for markdown
                        client=client_yaml,
                        provider=provider_yaml),
-         output_file = sprintf("%s/%04d_%s_%s.pdf",  # output file
-                               invdir,
+         output_file = sprintf("%04d_%s_%s.pdf",  # output file
                                df$invoice_number, 
                                gsub(" ", "", cl$client_name), 
                                format(Sys.time(),"%Y%m%d")))

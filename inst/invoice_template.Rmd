@@ -7,6 +7,7 @@ header-includes:
    - \usepackage{tabto}
    - \usepackage{float}
    - \usepackage{tabularx}
+   - \usepackage{colortbl}
 always_allow_html: yes
 ---
 

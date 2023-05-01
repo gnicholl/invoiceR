@@ -2,6 +2,7 @@ require(rmarkdown)
 require(yaml)
 
 
+
 invoiceR <- function(invoice_yaml, client_yaml, provider_yaml, income_file=NULL){
   
   template_rmd = system.file("invoice_template.Rmd",package="invoiceR")

@@ -5,6 +5,7 @@ output:
     latex_engine: xelatex
 header-includes:
    - \usepackage{tabto}
+   - \usepackage{float}
 always_allow_html: yes
 ---
 

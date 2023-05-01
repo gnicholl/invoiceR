@@ -7,8 +7,6 @@ invoiceR <- function(invoice_yaml, client_yaml, provider_yaml, income_file=NULL)
   
   template_rmd = system.file("invoice_template.Rmd",package="invoiceR")
   
-  print(getwd())
-  
   #### Create invoice by rendering PDF using  rmarkdown ####
   df <- read_yaml(invoice_yaml)
   cl <- read_yaml(client_yaml)
@@ -21,8 +19,8 @@ invoiceR <- function(invoice_yaml, client_yaml, provider_yaml, income_file=NULL)
          output_file = sprintf("%04d_%s_%s.pdf",  # output file
                                df$invoice_number, 
                                gsub(" ", "", cl$client_name), 
-                               format(Sys.time(),"%Y%m%d")))
-  detach("package:kableExtra", unload=TRUE) # detach kableExtra
+                               format(Sys.time(),"%Y%m%d")),
+         output_dir = getwd())
   
   #### Append (or save if first time) to yearly freelance income data ####
   if(is.null(income_file)){

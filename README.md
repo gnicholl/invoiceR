@@ -1,13 +1,13 @@
 # invoiceR
 
-An R Markdown based invoicing system that (1) creates a PDF invoice and (2) input billed balance into an income csv file. 
+An R function which (1) uses Rmarkdown to create a PDF invoice and (2) produces a csv file documenting invoices. 
 Install via `remotes::install_github("gnicholl/invoiceR")`. mychan24 is the original author. I have made just a handful of changes
 in order to make the package work out of the box. At least I *think* it works, as long as you have TinyTex to auto install tex packages.
 You may need to install Open Sans font manually, i.e. `tinytex::tlmgr_install(pkgs=c("opensans"))`.
 
 ## Example
 
-* Find example code in `inst/demo/ClientName_InvoiceGeneration.Rmd` which will generate PDF invoice and export a csv file with income data. 
+* Find example code in `inst/demo/ClientName_InvoiceGeneration.R` which will generate PDF invoice and export a csv file with income data. 
 * If it is run again, the same invoice will be generated, but income data will not be exported unless the invoice number is different (try changing the `invoice_demo.yaml` file) 
 
 ## Inputs

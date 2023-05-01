@@ -6,6 +6,7 @@ output:
 header-includes:
    - \usepackage{tabto}
    - \usepackage{float}
+   - \usepackage{tabularx}
 always_allow_html: yes
 ---
 

@@ -1,5 +1,5 @@
 Title: Testing invoiceR
-Package: testingcir
+Package: invoiceR
 Type: Package
 Version: 1.0
 Authors@R: person("Micale", "Chan", email = "notreal@email.ca",

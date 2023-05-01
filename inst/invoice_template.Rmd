@@ -14,10 +14,6 @@ knitr::opts_chunk$set(echo = FALSE) # don't show code in output
 libs <- c("yaml", "tidyverse", "kableExtra")
 
 xfun::pkg_attach(libs)
-
-df <- read_yaml(params$invoice)
-cl <- read_yaml(params$client)
-pr <- read_yaml(params$provider)
 ```
 
 ```{r func}

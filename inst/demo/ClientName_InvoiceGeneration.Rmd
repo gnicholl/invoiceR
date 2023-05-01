@@ -20,7 +20,6 @@ ddir <- "../"
 invoiceR(invoice_yaml = file.path(ddir,"demo/invoice_demo.yaml"),
          client_yaml = file.path(ddir,"demo/client.yaml"),
          provider_yaml = file.path(ddir,"demo/provider.yaml"),
-         template_rmd = file.path(ddir, "templates/invoice_template.Rmd"),
          invdir = file.path(ddir, "demo"),
          # switch income_file to NULL if already have income data inputted.
          income_file = file.path(ddir, "demo/new_income.csv") 

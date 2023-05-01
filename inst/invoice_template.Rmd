@@ -1,8 +1,4 @@
 ---
-params:
-  invoice: "../demo/invoice_demo.yaml"
-  client: "../demo/client.yaml"
-  provider: "../demo/provider.yaml"
 mainfont: Open Sans
 output: 
   pdf_document:

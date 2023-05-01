@@ -1,7 +1,9 @@
 require(rmarkdown)
 require(yaml)
 
-invoiceR <- function(invoice_yaml, client_yaml, provider_yaml, template_rmd, invdir, income_file=NULL){
+invoiceR <- function(invoice_yaml, client_yaml, provider_yaml, invdir, income_file=NULL){
+  
+  template_rmd = system.file("invoice_template.Rmd",package="invoiceR")
   
   print(getwd())
   # setwd(invdir)

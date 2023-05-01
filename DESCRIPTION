@@ -2,7 +2,7 @@ Title: Testing invoiceR
 Package: testingcir
 Type: Package
 Version: 1.0
-Authors@R: person("Micale", "Chan", email = "",
+Authors@R: person("Micale", "Chan", email = "notreal@email.ca",
     role = c("aut", "cre"))
 Description: Generate PDF invoice and export balance data to csv file
 License: MIT + file LICENSE

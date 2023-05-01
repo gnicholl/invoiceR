@@ -5,6 +5,8 @@ require(yaml)
 
 invoiceR <- function(invoice_yaml, client_yaml, provider_yaml, income_file=NULL){
   
+  keep_cur_wd = getwd()
+  
   template_rmd = system.file("invoice_template.Rmd",package="invoiceR")
   
   #### Create invoice by rendering PDF using  rmarkdown ####
@@ -20,7 +22,7 @@ invoiceR <- function(invoice_yaml, client_yaml, provider_yaml, income_file=NULL)
                                df$invoice_number, 
                                gsub(" ", "", cl$client_name), 
                                format(Sys.time(),"%Y%m%d")),
-         output_dir = getwd())
+         output_dir = keep_cur_wd)
   
   #### Append (or save if first time) to yearly freelance income data ####
   if(is.null(income_file)){
